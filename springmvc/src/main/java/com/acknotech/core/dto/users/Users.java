@@ -9,37 +9,44 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class Users {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "id")
 	private int id;
+	@Column(name = "username")
 	private String username;
+	@Column(name = "password")
 	private String password;
 	
-	
-	@GeneratedValue
-    @Column(name = "username")
+
 	public String getUsername() {
 		return username;
 	}
 	
-	@Column(name = "username")
+	
 	public void setUsername(String username) {
 		this.username = username;
 	}
 	
-	@GeneratedValue
-    @Column(name = "password")
+
+    
 	public String getPassword() {
 		return password;
 	}
 	
-	@Column(name = "password")
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	@Id
-    @GeneratedValue
-    @Column(name = "id")
+
+    
 	public int getId() {
 		return id;
+	}
+
+    
+	public void setId(int id) {
+		this.id=id;
 	}
 }
